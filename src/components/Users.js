@@ -1,7 +1,8 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import User from "./User";
-import useUsers from "../hooks/useUsers";
+// import useUsers from "../hooks/useUsers";
+import LogOut from "./LogOut";
 
 function Users() {
   // const { loading, users } = useUsers();
@@ -16,9 +17,7 @@ function Users() {
           <User />
         </li>
       </ul>
-      <div className="">
-        <img src="/svg/backIcon.svg" alt="backIcon" className="w-6" />
-      </div>
+      <LogOut />
     </div>
   );
 }

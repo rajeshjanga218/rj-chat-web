@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useSignUp from "../hooks/useSignUp";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [username, setusername] = useState("");
@@ -20,7 +21,7 @@ const SignUp = () => {
 
   return (
     <div className="h-full flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center gap-4 border w-full h-full md:w-1/3 md:h-[80%] p-10 rounded-lg">
+      <div className="flex flex-col justify-center items-center gap-4 border w-full h-full md:w-1/3 md:h-full p-10 rounded-lg">
         <h1>sign Up</h1>
         <form onSubmit={handleForSubmit} className="flex flex-col gap-4">
           <div>
@@ -98,6 +99,12 @@ const SignUp = () => {
               </label>
             </div>
           </div>
+          <p>
+            Already have an account ?
+            <Link to="/login">
+              <span className="text-blue-500"> Login</span>
+            </Link>
+          </p>
           <div className="flex justify-center">
             <button type="submit" className="rounded-lg border py-1 px-2">
               Submit

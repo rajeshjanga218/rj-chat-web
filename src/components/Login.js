@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import useSignIn from "../hooks/useSignIn";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setusername] = useState("");
   const [password, setPassword] = useState("");
 
   const { loading, signIn } = useSignIn();
+  const navigate = useNavigate();
 
   const handleForSubmit = async (e) => {
     e.preventDefault();
 
     await signIn({ username, password });
+    navigate("/");
   };
   if (loading) return <>loading...</>;
   return (
@@ -40,6 +43,12 @@ const Login = () => {
               />
             </div>
           </div>
+          <p>
+            New user ?
+            <Link to="/signup">
+              <span className="text-blue-500"> Sign Up</span>
+            </Link>
+          </p>
           <div className="flex justify-center">
             <button type="submit" className="rounded-lg border py-1 px-2">
               Submit

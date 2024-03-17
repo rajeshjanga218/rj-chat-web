@@ -6,12 +6,15 @@ import Error from "./components/Error";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
+import AuthComponent from "./components/AuthComponent";
 
 function App() {
   return (
     <div className="h-screen">
       <Header />
-      <Outlet />
+      <AuthComponent>
+        <Outlet />
+      </AuthComponent>
       <Footer />
       <Toaster />
     </div>
