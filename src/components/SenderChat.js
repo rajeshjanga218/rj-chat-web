@@ -1,9 +1,10 @@
 import React from "react";
 
-function SenderChat() {
+function SenderChat({ message }) {
+  // console.log("messageS", message);
   return (
     <div className="flex justify-end items-center gap-2">
-      <div className="bg-green-600 p-2 rounded-lg">Hi Sam!</div>
+      <div className="bg-green-600 p-2 rounded-lg">{message.message}</div>
       <div>
         <img
           src="https://expertphotography.b-cdn.net/wp-content/uploads/2018/10/cool-profile-pictures-retouching-1.jpg"

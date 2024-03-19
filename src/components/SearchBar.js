@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const SearchBar = () => {
   const [searchText, setSearchText] = useState("");
   return (
-    <div className="p-2 flex gap-2">
+    <div className="p-2 flex gap-2 bg-red-900">
       <div className="w-full">
         <input
           type="text"

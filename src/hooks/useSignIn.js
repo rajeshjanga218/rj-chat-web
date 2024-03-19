@@ -28,7 +28,7 @@ function useSignIn() {
       if (data.error) {
         throw new Error(data.error);
       }
-      console.log(data);
+      // console.log(data);
 
       localStorage.setItem("rj-chat-user", JSON.stringify(data));
       setAuthUser(data);

@@ -5,11 +5,11 @@ import Users from "./Users";
 const Home = () => {
   return (
     <div className="h-full flex justify-center items-center py-5">
-      <div className="h-full w-5/6 bg-slate-100 grid grid-cols-7">
-        <div className="col-span-3 bg-red-300 ">
+      <div className="h-screen w-5/6 grid grid-cols-7 bg-black p-1">
+        <div className="col-span-3">
           <Users />
         </div>
-        <div className="col-span-4 bg-red-600 h-full">
+        <div className="col-span-4 bg-red-600">
           <Conversation />
         </div>
       </div>

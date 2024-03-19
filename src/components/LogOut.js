@@ -13,7 +13,7 @@ function LogOut() {
   };
 
   return (
-    <div>
+    <div className="bg-green-400 p-2">
       <img
         src="/svg/backIcon.svg"
         alt="backIcon"
