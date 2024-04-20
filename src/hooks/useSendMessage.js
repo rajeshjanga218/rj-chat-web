@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useConversationStore from "../zustund/useStore";
+import useConversationStore from "../zustand/useStore";
 import toast from "react-hot-toast";
 import { useAuthContext } from "../context/authContext";
 

@@ -7,15 +7,18 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import AuthComponent from "./components/AuthComponent";
+import { SocketContextProvider } from "./context/socketContext";
 
 function App() {
   return (
     <div className="h-screen">
-      <Header />
+      {/* <Header /> */}
       <AuthComponent>
-        <Outlet />
+        <SocketContextProvider>
+          <Outlet />
+        </SocketContextProvider>
       </AuthComponent>
-      <Footer />
+      {/* <Footer /> */}
       <Toaster />
     </div>
   );

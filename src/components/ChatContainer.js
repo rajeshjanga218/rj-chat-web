@@ -10,13 +10,13 @@ function ChatContainer({ message }) {
   //   console.log(fromMe, message);
   //   console.log(typeof message);
   return (
-    <div className="">
+    <>
       {fromMe === true ? (
         <SenderChat message={message} />
       ) : (
         <ReceiverChat message={message} />
       )}
-    </div>
+    </>
   );
 }
 

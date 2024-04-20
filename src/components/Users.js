@@ -10,10 +10,10 @@ function Users() {
   if (loading) return <>loading...</>;
 
   return (
-    <div className="flex flex-col justify-between bg-slate-600">
-      <div className="">
-        <SearchBar />
-        <ul className="h-full flex flex-col gap-2 p-2 overflow-auto">
+    <div className="h-full flex flex-col justify-between bg-slate-600">
+      <SearchBar />
+      <div className="relative h-full">
+        <ul className="absolute h-full w-full flex flex-col gap-2 p-2 overflow-auto">
           {users?.map((user) => (
             <li key={user._id}>
               <User user={user} />
@@ -21,6 +21,7 @@ function Users() {
           ))}
         </ul>
       </div>
+
       <div className="">
         <LogOut />
       </div>
