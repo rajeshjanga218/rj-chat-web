@@ -12,7 +12,7 @@ const useSendMessage = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:4000/api/messages/send/${selectedUser._id}`,
+        `${process.env.REACT_APP_BACKEND_API_ENDPOINT}/api/messages/send/${selectedUser._id}`,
         {
           method: "POST",
           headers: {

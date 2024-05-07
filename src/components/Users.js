@@ -14,7 +14,7 @@ function Users() {
       <SearchBar />
       <div className="relative h-full">
         <ul className="absolute h-full w-full flex flex-col gap-2 p-2 overflow-auto">
-          {users?.map((user) => (
+          {users.length>0 && users?.map((user) => (
             <li key={user._id}>
               <User user={user} />
             </li>

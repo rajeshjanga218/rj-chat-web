@@ -22,7 +22,7 @@ function useSignUp() {
     if (!success) return;
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/user/signup", {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_API_ENDPOINT}/api/user/signup`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

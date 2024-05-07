@@ -9,7 +9,7 @@ function useLogout() {
   const logOut = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/user/logout", {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_API_ENDPOINT}/api/user/logout`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
       });

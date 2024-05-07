@@ -10,7 +10,7 @@ function useUsers() {
   const getAllUsers = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/user/getAllUsers", {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_API_ENDPOINT}/api/user/getAllUsers`, {
         method: "GET",
         // credentials: "include",
         headers: {

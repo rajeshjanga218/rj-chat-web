@@ -9,7 +9,7 @@ const Conversation = () => {
   useSocketMessages();
   const { loadig, messages } = useMessages();
   const { selectedUser } = useConversationStore();
-  console.log("meassages", messages);
+  // console.log("meassages", messages);
 
   if (!selectedUser) return <></>;
   return (

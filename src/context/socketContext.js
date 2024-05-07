@@ -15,17 +15,17 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:4000", {
+      const socket = io(process.env.REACT_APP_BACKEND_API_ENDPOINT, {
         query: {
           userId: authUser._id,
         },
       });
       setSocket(socket);
-      console.log(socket);
+      // console.log(socket);
 
       socket.on("getOnlineUsers", (users) => {
         setOnlineUsers(users);
-        console.log(users);
+        // console.log(users);
       });
 
       return () => socket.close();
